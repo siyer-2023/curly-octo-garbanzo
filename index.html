@@ -6,20 +6,20 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
     }
-    header {
+    header, footer {
       background-color: #333;
       color: white;
-      padding: 1em;
       text-align: center;
+      padding: 1em;
     }
     nav {
       background-color: #555;
-      padding: 0.5em;
       text-align: center;
+      padding: 0.5em;
     }
     nav a {
       color: white;
@@ -27,19 +27,20 @@
       text-decoration: none;
     }
     section {
-      padding: 2em;
-      background-color: white;
       margin: 1em;
+      padding: 1em;
+      background-color: white;
       border-radius: 8px;
     }
-    h2 {
-      color: #333;
+    details {
+      margin-bottom: 1em;
     }
-    footer {
-      text-align: center;
-      padding: 1em;
-      background-color: #333;
-      color: white;
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.5em;
+      background-color: #eee;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -50,39 +51,55 @@
 </header>
 
 <nav>
-  <a href="#download">Download LTspice</a>
-  <a href="#circuit">Add a Simple Circuit</a>
-  <a href="#simulate">Simulate the Circuit</a>
+  <a href="#download">Download</a>
+  <a href="#circuit">Circuit</a>
+  <a href="#simulate">Simulate</a>
+  <a href="#wheatstone">Wheatstone Bridge</a>
 </nav>
 
 <section id="download">
-  <h2>1. How to Download LTspice</h2>
-  <p>Visit the official Analog Devices website to download LTspice:</p>
-  <p>https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html</p>
-  <p>Choose the version for your operating system and follow the installation instructions.</p>
+  <details open>
+    <summary>1. How to Download LTspice</summary>
+    <p>Visit the official Analog Devices website:</p>
+    <p><a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html" target="_our OS and follow the installation instructions.</p>
+  </details>
 </section>
 
 <section id="circuit">
-  <h2>2. Adding a Simple Circuit</h2>
-  <p>After launching LTspice:</p>
-  <ul>
-    <li>Click on <strong>File → New Schematic</strong></li>
-    <li>Use the toolbar to add components like resistors, capacitors, voltage sources</li>
-    <li>Press <strong>F2</strong> to open the component library</li>
-    <li>Wire the components using the wire tool (F3)</li>
-  </ul>
+  <details>
+    <summary>2. Adding a Simple Circuit</summary>
+    <ul>
+      <li>Open LTspice and create a new schematic.</li>
+      <li>Press <strong>F2</strong> to add components.</li>
+      <li>Use <strong>F3</strong> to wire them together.</li>
+    </ul>
+  </details>
 </section>
 
 <section id="simulate">
-  <h2>3. Simulating the Circuit</h2>
-  <p>To simulate your circuit:</p>
-  <ul>
-    <li>Click on <strong>Simulate → Edit Simulation Cmd</strong></li>
-    <li>Select the type of analysis (e.g., Transient, AC Analysis)</li>
-    <li>Place the simulation command on the schematic</li>
-    <li>Click the Run button (the running man icon)</li>
-  </ul>
-  <p>View the results in the waveform viewer and analyze your circuit's behavior.</p>
+  <details>
+    <summary>3. Simulating the Circuit</summary>
+    <ul>
+      <li>Go to <strong>Simulate → Edit Simulation Cmd</strong></li>
+      <li>Choose analysis type and place the command.</li>
+      <li>Click the Run button to view results.</li>
+    </ul>
+  </details>
+</section>
+
+<section id="wheatstone">
+  <details>
+    <summary>4. Wheatstone Bridge Example</summary>
+    <p>This is a classic example to demonstrate voltage differences across a bridge:</p>
+    <ul>
+      <li>Four resistors arranged in a diamond shape</li>
+      <li>Voltage source across the bridge</li>
+      <li>Voltage probe between the midpoints</li>
+    </ul>
+    <p><strong>Image:</strong></p>
+    <p>!Wheatstone Bridge Circuit</p>
+    <p><strong>Download Circuit File:</strong> (coming soon)</p>
+  </details>
 </section>
 
 <footer>
